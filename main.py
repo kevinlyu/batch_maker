@@ -2,7 +2,7 @@ from BatchProcess import *
 import matplotlib.pyplot as plt
 
 
-m = BatchMaker(input_dir="./testSet/", batch_size=4000)
+m = BatchMaker(input_dir="./img/", batch_size=4000)
 m.process_with_reshape(reshape=(100, 100))
 
 r = BatchReader()
