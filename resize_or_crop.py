@@ -27,12 +27,16 @@ if (os.path.exists(input_dir) == False):
     print("No input directory")
     exit()
 try:
-    os.stat(except_dir)
     os.stat(output_dir)
 
 except:
-    os.mkdir(except_dir)
     os.mkdir(output_dir)
+
+try:
+    os.stat(except_dir)
+
+except:
+    os.mkdir(except_dir)
 
 file_list = os.listdir(input_dir)
 batch_num = math.ceil(file_list.__len__() / batch_size)
